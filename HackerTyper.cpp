@@ -2,28 +2,26 @@
 #include <SFML/Graphics.hpp>
 #include <cstdio>
 
-const int window_length = 1280;
-const int window_width = 720;
+const int window_length = 1920;
+const int window_width = 1080;
 
 
 //int main()
 //{
 //	setlocale(LC_ALL, "Russian");
-//	sf::RenderWindow window(sf::VideoMode(window_length, window_width), "HackerTyper");
+//	sf::RenderWindow window(sf::VideoMode(window_length, window_width), "HackerTyper", sf::Style::Fullscreen);
+//	sf::View view;
 //
-//#pragma warning(disable : 4996) .
+//	#pragma warning(disable : 4996) .
 //	FILE* f = fopen("D:\\Проги\\ht.txt", "r");
 //	fseek(f, 0, SEEK_END);
 //	int len = ftell(f);
 //	rewind(f);
 //	char* cbuffer = new char[len];
-//	size_t p = fread(cbuffer, sizeof(int), len, f);
+//	size_t p = fread(cbuffer, 1, len, f);
 //	fclose(f);
-//	String buffer = String(cbuffer);
+//	String buffer = String(cbuffer).split(p)[0];
 //	delete[] cbuffer;
-//	std::cout << buffer.str;
-//
-//
 //
 //	String text;
 //
