@@ -44,6 +44,16 @@ public:
 		len = 1;
 	}
 
+	String(const String& sample)
+	{
+		capacity = sample.capacity;
+		len = sample.len;
+		str = new char[capacity];
+		for (int i = 0; i < len; i++)
+			str[i] = sample.str[i];
+		str[len] = '\0';
+	}
+
 	~String()
 	{
 		delete[] str;
@@ -96,7 +106,6 @@ public:
 			if (i < index)
 			{
 				res[0] += String(str[i]);
-				std::cout << i;
 			}
 			if (i > index)
 			{
@@ -110,7 +119,6 @@ public:
 	void operator+=(String str2)
 	{
 		int new_len = len + str2.len;
-		std::cout << str << "   " << new_len << "   " << len;
 
 		if (new_len >= capacity)
 		{
@@ -130,6 +138,5 @@ public:
 		str[new_len] = '\0';
 
 		len = new_len;
-		std::cout << "                 1233333333333333333333   " << str;
 	}
 };
