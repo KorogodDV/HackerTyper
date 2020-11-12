@@ -28,10 +28,9 @@ public:
 	String()
 	{
 		char c = '\0';
-		char* c1 = &c;
 		capacity = 100;
 		str = new char[capacity];
-		str[0] = c1[0];
+		str[0] = c;
 		len = 0;
 	}
 
