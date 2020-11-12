@@ -94,9 +94,16 @@ public:
 		while (i < len)
 		{
 			if (i < index)
+			{
+				std::cout << "         " << i << "     ";
+				std::cout << str[i];
 				res[0] += String(str[i]);
+				std::cout << " 12312321312";
+			}
 			if (i > index)
+			{
 				res[1] += String(str[i]);
+			}
 			i++;
 		}
 		return res;
