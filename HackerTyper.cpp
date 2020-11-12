@@ -75,5 +75,6 @@ int main()
 	String str2 = String(s2);
 	//str1 += str2;
 	std::cout << str1.split(5)[0].str;
+	//std::cout << str1.str;
 	return 0;
 }

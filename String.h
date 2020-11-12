@@ -95,10 +95,8 @@ public:
 		{
 			if (i < index)
 			{
-				std::cout << "         " << i << "     ";
-				std::cout << str[i];
 				res[0] += String(str[i]);
-				std::cout << " 12312321312";
+				std::cout << i;
 			}
 			if (i > index)
 			{
@@ -112,11 +110,17 @@ public:
 	void operator+=(String str2)
 	{
 		int new_len = len + str2.len;
+		std::cout << str << "   " << new_len << "   " << len;
 
 		if (new_len >= capacity)
 		{
-			capacity *= 2;
-			str = (char*)realloc(str, capacity);
+			capacity = new_len * 2;
+			char* old_str = new char[capacity];
+			for (int i = 0; i < len; i++)
+				old_str[i] = str[i];
+			old_str[len] = '\0';
+			delete[] str;
+			str = old_str;
 		}
 
 		for (int i = 0; i < str2.len; i++)
@@ -126,5 +130,6 @@ public:
 		str[new_len] = '\0';
 
 		len = new_len;
+		std::cout << "                 1233333333333333333333   " << str;
 	}
 };
