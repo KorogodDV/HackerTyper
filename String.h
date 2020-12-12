@@ -27,16 +27,15 @@ public:
 
 	String()
 	{
-		char c = '\0';
 		capacity = 100;
 		str = new char[capacity];
-		str[0] = c;
+		str[0] = '\0';
 		len = 0;
 	}
 
 	String(char c)
 	{
-		capacity = 5;
+		capacity = 100;
 		str = new char[capacity];
 		str[0] = c;
 		str[1] = '\0';
@@ -48,9 +47,8 @@ public:
 		capacity = sample.capacity;
 		len = sample.len;
 		str = new char[capacity];
-		for (int i = 0; i < len; i++)
+		for (int i = 0; i < len+1; i++)
 			str[i] = sample.str[i];
-		str[len] = '\0';
 	}
 
 	~String()
